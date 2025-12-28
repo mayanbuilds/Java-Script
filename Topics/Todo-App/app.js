@@ -1,0 +1,40 @@
+const input = document.querySelector("#input");
+const ol = document.querySelector("#ol");
+
+const allTodos = [];
+
+function renderTodo() {
+  ol.innerHTML = "";
+  for (let i = 0; i < allTodos.length; i++) {
+    ol.innerHTML += `<li>
+                ${allTodos[i]}
+                <div class="actions">
+                    <button class="delete-btn" onclick="deleteTodo(${i})">Delete</button>
+                    <button class="edit-btn" onclick="editTodo(${i})">Edit</button>
+                </div>
+            </li>`;
+  }
+}
+function addTodo() {
+  allTodos.push(input.value);
+
+  renderTodo();
+  input.value = "";
+}
+
+function deleteTodo(index) {
+  console.log("todo deleted", index);
+  allTodos.splice(index, 1);
+  renderTodo();
+}
+function editTodo(index) {
+  console.log("todo edited", index);
+  const updatedVal = prompt("enter updated value", allTodos[index]);
+  //   allTodos.splice(index , 1 , updatedVal)
+  allTodos[index] = updatedVal
+
+  renderTodo()
+}
+
+
+// 20 problems

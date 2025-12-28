@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expanses App</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expanses App</h1>
+
+        <div class="input-area">
+          <input type="number" placeholder="Enter Amount" id="input" />
+
+<select id="category" name="category">
+  <option value="">-- Select Category --</option>
+  <option value="Food">Food</option>
+  <option value="Petrol">Petrol</option>
+  <option value="Shopping">Shopping</option>
+  <option value="Haircut">Haircut</option>
+  <option value="Loan">Loan</option>
+  <option value="Health">Health</option>
+  <option value="Travel">Travel</option>
+  <option value="Other">Other Expenses</option>
+</select>
+
+<br><br>
+
+<input type="text" placeholder="review" id="input2" />
+
+<br><br>
+
+<button onclick="addTodo()">Add Expenses</button>
+
+<ol id="ol"></ol>
+
+    </div>
+
+<h3>Total Expenses: <span id="total">0</span></h3>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
