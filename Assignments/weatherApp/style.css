@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 👈 FIX */
+  padding-top: 40px;       /* 👈 FIX */
+  color: #e5e7eb;
+}
+
+/* App wrapper */
+.app {
+  width: 380px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #020617;
+  border-radius: 14px;
+  padding: 6px; /* spacing around input & button */
+  margin-bottom: 25px;
+  border: 1px solid #1e293b;
+}
+
+.search-bar input {
+  flex: 1;
+  background: #020617;
+  border: none;
+  padding: 12px 14px;
+  color: #e5e7eb;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.search-bar input::placeholder {
+  color: #64748b;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+/* Button */
+.search-bar button {
+  margin-left: 8px;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.search-bar button:hover {
+  background: #0ea5e9;
+}
+
+/* Weather cards */
+.city {
+  background: #020617;
+  border-left: 5px solid #38bdf8;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: appear 0.3s ease;
+}
+
+.left h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.condition {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 4px 0;
+}
+
+.temp {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Icon */
+.right img {
+  width: 60px;
+}
+
+/* Animation */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
