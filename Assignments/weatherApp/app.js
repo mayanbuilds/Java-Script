@@ -16,7 +16,7 @@ form.addEventListener("submit", (e) => {
         console.log(res);
       cities.unshift(res);
       renderCities();
-      // input.value = "";
+      input.value = "";
     })
     .catch((err) => {
         console.log(err);
